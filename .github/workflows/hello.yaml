@@ -13,7 +13,7 @@ jobs:
       - name: prints hello
         run: echo "Hello from github actions"
       - name: prints date and time
-        run: time
+        run: date
       - name: prints the name of the branch
         run: echo "The triggered branch name is ${{ github.ref_name }}"
       - name: listing the files in the repo
