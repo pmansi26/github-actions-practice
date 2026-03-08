@@ -1,0 +1,12 @@
+name: pr-check
+on:
+  pull_request:
+    types: [opened , synchronize]
+    branches: [main]
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print PR branch name
+        run: echo "pr check running for branch ${{ github.head_ref }}"
+
