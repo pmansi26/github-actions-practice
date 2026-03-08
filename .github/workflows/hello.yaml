@@ -20,3 +20,5 @@ jobs:
         run: ls -la
       - name: Print os name of the runner
         run: echo "The operating system is $RUNNER_OS"    
+      - name: failing command
+        run: exit1
