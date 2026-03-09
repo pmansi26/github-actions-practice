@@ -1,0 +1,18 @@
+name: Github-Runners
+on:
+  push:
+    branches: [main]
+jobs:
+  ubuntu:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: ["ubuntu-latest" , "windows-latest" , "macos-latest"]
+    steps:
+      - name: printing os name
+        run: echo "Running on ${{ runner.os }}"
+      - name: printing runner's hostname
+        run: echo "Runner's hostname is $HOSTNAME"
+      - name: printing current user running the jon
+        run: echo "This job is run by ${{ github.actor }}"
+
