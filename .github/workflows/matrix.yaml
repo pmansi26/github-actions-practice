@@ -19,5 +19,5 @@ jobs:
       - name: check python version
         run: python --version
       - name: check operating system
-        run : echo "Running on $RUNNER_OS"
+        run : echo "Running on ${{ runner.os }}"
 
